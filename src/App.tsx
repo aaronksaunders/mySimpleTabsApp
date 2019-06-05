@@ -21,41 +21,24 @@ import "@ionic/core/css/flex-utils.css";
 import "@ionic/core/css/display.css";
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import HomeDetailPage from './pages/HomeDetailPage';
+import TabRoot from './pages/TabRoot';
 
 
 const App: React.SFC = () => {
-  let authenticated = false
+  let authenticated = true
   return !authenticated ? 
     <Router>
       <IonApp>
-        <Route path="/:tab(login)"  component={LoginPage}  exact={true} />
-        <Route path="/:tab(register)"  component={RegisterPage}  exact={true} />
+        <Route path="/login"  component={LoginPage}  exact={true} />
+        <Route path="/register"  component={RegisterPage}  exact={true} />
         <Route path="/*" render={() => <Redirect to="/login"/>} />
       </IonApp>
     </Router>
 :
     <Router>
-      <Route exact path="/" render={() => <Redirect to="/home"/>} />
       <IonApp>
-        <IonPage>
-          <IonTabs>
-            <IonRouterOutlet>
-              <Route path="/:tab(home)" component={Home} exact={true} />
-              <Route path="/:tab(settings)" component={Settings} />
-              <Route path="/*" render={() => <Redirect to="/home"/>} />
-            </IonRouterOutlet>
-            <IonTabBar slot="bottom">
-              <IonTabButton tab="home" href="/home">
-                <IonIcon name="flash" />
-                <IonLabel>Tab One</IonLabel>
-              </IonTabButton>
-              <IonTabButton tab="settings"  href="/settings">
-                <IonIcon name="apps" />
-                <IonLabel>Tab Two</IonLabel>
-              </IonTabButton>
-            </IonTabBar> 
-          </IonTabs>
-        </IonPage>
+      <Route path="/" component={TabRoot} />
       </IonApp>
     </Router>
 
