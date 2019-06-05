@@ -1,12 +1,13 @@
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonPage } from '@ionic/react';
 import React from 'react';
 
 const Home: React.SFC<any> = () => {
   return (
     <>
+    <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Ionic Blank</IonTitle>
+          <IonTitle>Ionic HOME</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent padding>
@@ -19,6 +20,7 @@ const Home: React.SFC<any> = () => {
           will be your guide.
         </p>
       </IonContent>
+      </IonPage>
     </>
   );
 };
