@@ -48,7 +48,7 @@ type Props = {
 };
 
 export class PrivateRoute extends Component<Props> {
-  isAuthenticated = false;
+  isAuthenticated = true;
   render() {
     const Component = this.props.component;
     const routeRender = (props: any) => {
@@ -72,7 +72,7 @@ const App: React.SFC = () => {
   return (
     <Router>
       <IonApp>
-        {/* Renders the first child <Route> or <Redirect> that matches the location. */}
+        {/* Switch: Renders the first child <Route> or <Redirect> that matches the location. */}
         <Switch>
           <Route path="/login" component={LoginPage} exact={true} />
           <Route path="/register" component={RegisterPage} exact={true} />

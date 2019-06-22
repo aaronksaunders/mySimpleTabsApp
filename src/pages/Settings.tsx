@@ -1,7 +1,14 @@
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonItem } from '@ionic/react';
-import React from 'react';
+import {
+  IonContent,
+  IonHeader,
+  IonTitle,
+  IonToolbar,
+  IonItem,
+  IonButton
+} from "@ionic/react";
+import React from "react";
 
-const Settings: React.SFC<any> = () => {
+const Settings: React.SFC<any> = props => {
   return (
     <>
       <IonHeader>
@@ -11,6 +18,19 @@ const Settings: React.SFC<any> = () => {
       </IonHeader>
       <IonContent padding>
         <IonItem>Settings</IonItem>
+        <IonItem>
+          {" "}
+          <IonButton
+            expand="full"
+            style={{ margin: "14" }}
+            onClick={e => {
+              e.preventDefault();
+              props.history.push("/settings-detail");
+            }}
+          >
+            NEXT PAGE
+          </IonButton>
+        </IonItem>
       </IonContent>
     </>
   );

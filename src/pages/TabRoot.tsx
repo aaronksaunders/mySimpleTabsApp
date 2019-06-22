@@ -17,6 +17,7 @@ import { withRouter, Route, Redirect } from "react-router-dom";
 import Home from "./Home";
 import HomeDetailPage from "./HomeDetailPage";
 import Settings from "./Settings";
+import SettingsDetailPage from "./SettingsDetailPage";
 
 const TabRoot: React.SFC<any> = props => {
   return (
@@ -28,6 +29,7 @@ const TabRoot: React.SFC<any> = props => {
             <Route path="/:tab(home)" component={Home} exact={true} />
             <Route path="/:tab(home-detail)" component={HomeDetailPage} />
             <Route path="/:tab(settings)" component={Settings} />
+            <Route path="/:tab(settings-detail)" component={SettingsDetailPage} />
             <Route path="/*" render={() => <Redirect to="/home" />} /> 
           </IonRouterOutlet>
 
