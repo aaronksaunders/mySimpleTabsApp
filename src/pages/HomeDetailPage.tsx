@@ -20,14 +20,14 @@ const HomeDetailPage: React.SFC<any> = props => {
               <IonBackButton
                 text=""
                 defaultHref="/"
-                onClick={ ()=> props.history.replace("/home")}
-                goBack={() => {}}
+                onClick={ ()=> props.history.goBack()}
+                // goBack={() => {}}
               />
             </IonButtons>
             <IonTitle>Ionic HOME DETAIL</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent padding>HomeDetailPage</IonContent>
+        <IonContent className="ion-padding">HomeDetailPage</IonContent>
       </IonPage>
   );
 };

@@ -18,13 +18,13 @@ const Home: React.SFC<any> = (props) => {
             <IonTitle>Ionic HOME</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonContent padding>
+        <IonContent className="ion-padding">
           The world is your oyster.
           <p>
             <IonButton
               expand="full"
               style={{ margin: "14" }}
-              onClick={e => {
+              onClick={(e: any) => {
                 e.preventDefault();
                 props.history.push("/home-detail");
               }}

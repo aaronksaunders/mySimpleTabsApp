@@ -1,11 +1,6 @@
 import React, { Component } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  Switch,
-  RouteComponentProps
-} from "react-router-dom";
+import { Route, Redirect, Switch, RouteComponentProps } from "react-router-dom";
+import { IonReactRouter } from "@ionic/react-router";
 import {
   IonApp,
   IonPage,
@@ -14,7 +9,7 @@ import {
   IonTabBar,
   IonTabButton,
   IonLabel,
-  IonIcon
+  IonIcon, 
 } from "@ionic/react";
 import Home from "./pages/Home";
 import Settings from "./pages/Settings";
@@ -70,17 +65,19 @@ export class PrivateRoute extends Component<Props> {
 
 const App: React.SFC = () => {
   return (
-    <Router>
-      <IonApp>
+    <IonApp>
+      <IonReactRouter>
         {/* Switch: Renders the first child <Route> or <Redirect> that matches the location. */}
+        <IonPage id="main">
         <Switch>
           <Route path="/login" component={LoginPage} exact={true} />
           <Route path="/register" component={RegisterPage} exact={true} />
           <PrivateRoute path="/" component={TabRoot} />
           <Route path="/*" render={() => <Redirect to="/login" />} />
         </Switch>
-      </IonApp>
-    </Router>
+        </IonPage>
+      </IonReactRouter>
+    </IonApp>
   );
 };
 

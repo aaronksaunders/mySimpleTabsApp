@@ -20,13 +20,13 @@ const SettingsDetailPage: React.SFC<any> = props => {
               text=""
               defaultHref="/"
               onClick={() => props.history.replace("/settings")}
-              goBack={() => {}}
+              // goBack={() => {}}
             />
           </IonButtons>
           <IonTitle>Ionic Settings Detail</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent padding>SettingsDetailPage</IonContent>
+      <IonContent class="ion-padding">SettingsDetailPage</IonContent>
     </IonPage>
   );
 };

@@ -37,11 +37,11 @@ const TabRoot: React.SFC<any> = props => {
           <IonTabBar slot="bottom">
             <IonTabButton tab="home" href="/home">
               <IonIcon name="flash" />
-              <IonLabel>Tab One</IonLabel>
+              <IonLabel>Home</IonLabel>
             </IonTabButton>
             <IonTabButton tab="settings" href="/settings">
               <IonIcon name="apps" />
-              <IonLabel>Tab Two</IonLabel>
+              <IonLabel>Settings</IonLabel>
             </IonTabButton>
           </IonTabBar>
 

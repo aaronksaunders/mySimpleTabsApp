@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonTabBar, IonTabButton, IonIcon, IonLabel, IonPage, IonTabs, IonTab } from '@ionic/react';
+import { IonContent, IonHeader, IonTitle, IonToolbar, IonButton, IonTabButton, IonIcon, IonLabel, IonPage, IonTabs, IonTab } from '@ionic/react';
 import React from 'react';
 
 const RegisterPage: React.SFC<any> = () => {
@@ -11,8 +11,11 @@ const RegisterPage: React.SFC<any> = () => {
         </IonToolbar>
       </IonHeader>    
 
-      <IonContent padding>
+      <IonContent className="ion-padding">
         REGISTER PAGE
+        <div>
+        <IonButton href="/login">CANCEL</IonButton>
+        </div>
       </IonContent>
     </IonPage>
     </>

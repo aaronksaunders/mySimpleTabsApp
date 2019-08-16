@@ -16,21 +16,15 @@ const Settings: React.SFC<any> = props => {
           <IonTitle>Ionic Blank: Settings</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent padding>
+      <IonContent className="ion-padding">
         <IonItem>Settings</IonItem>
-        <IonItem>
-          {" "}
           <IonButton
             expand="full"
             style={{ margin: "14" }}
-            onClick={e => {
-              e.preventDefault();
-              props.history.push("/settings-detail");
-            }}
+            href="/settings-detail"
           >
             NEXT PAGE
           </IonButton>
-        </IonItem>
       </IonContent>
     </>
   );
