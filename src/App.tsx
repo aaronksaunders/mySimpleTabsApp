@@ -4,15 +4,7 @@ import { IonReactRouter } from "@ionic/react-router";
 import {
   IonApp,
   IonPage,
-  IonTabs,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonLabel,
-  IonIcon, 
 } from "@ionic/react";
-import Home from "./pages/Home";
-import Settings from "./pages/Settings";
 
 /* Core CSS required for Ionic components to work properly */
 import "@ionic/core/css/core.css";
@@ -31,7 +23,6 @@ import "@ionic/core/css/flex-utils.css";
 import "@ionic/core/css/display.css";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
-import HomeDetailPage from "./pages/HomeDetailPage";
 import TabRoot from "./pages/TabRoot";
 import { any } from "prop-types";
 
